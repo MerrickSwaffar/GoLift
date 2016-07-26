@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Enter your meal information:"
+        android:text="Enter your information:"
         android:textColor="@color/colorPrimaryDark"
         android:id="@+id/textView"
         android:layout_alignParentTop="true"

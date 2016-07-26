@@ -9,9 +9,11 @@
             android:title="Settings" />
         <item
             android:id="@+id/userInfo"
+            android:icon="@drawable/profile"
             android:title="User Information"/>
         <item
             android:id="@+id/history"
+            android:icon="@drawable/history"
             android:title="History" />
     </group>
 

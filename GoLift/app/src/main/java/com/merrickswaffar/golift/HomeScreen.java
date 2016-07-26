@@ -25,10 +25,6 @@ public class HomeScreen extends AppCompatActivity {
     View.OnClickListener onClick;
     public static User user;
 
-    public static void clearUserData(){
-        user = new User();
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

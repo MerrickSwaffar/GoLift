@@ -30,8 +30,8 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="@drawable/workoutplain"
-            android:text="Log your workouts"
+            android:background="@drawable/workoutplain1"
+            android:text=""
             android:textColor="@color/colorAccent"
             android:textStyle="bold"
             android:textSize="50dp"
@@ -44,8 +44,8 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="@drawable/logmeals"
-            android:text="Log your meals"
+            android:background="@drawable/logmeals1"
+            android:text=""
             android:textColor="@color/colorAccent"
             android:textStyle="bold"
             android:textSize="50dp"
@@ -60,8 +60,8 @@
             android:layout_marginBottom="@dimen/activity_vertical_margin">
 
             <Button
-                android:background="@drawable/training"
-                android:text="Training Suggestions"
+                android:background="@drawable/training1"
+                android:text=""
                 android:textColor="@color/colorAccent"
                 android:textStyle="bold"
                 android:textSize="25dp"
@@ -73,8 +73,8 @@
                 />
 
             <Button
-                android:background="@drawable/foodimage"
-                android:text="Nutrition suggestions"
+                android:background="@drawable/foodimage1"
+                android:text=""
                 android:textColor="@color/colorAccent"
                 android:textStyle="bold"
                 android:textSize="25sp"
@@ -88,13 +88,13 @@
 
         <Button
             android:layout_width="match_parent"
-            android:text="Day Overview"
+            android:text=""
             android:textColor="@color/colorAccent"
             android:textStyle="bold"
             android:textSize="50dp"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="@drawable/sunset"
+            android:background="@drawable/sunset1"
             android:id="@+id/progress"
             />
 

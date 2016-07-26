@@ -34,7 +34,7 @@ public class ShowExercises extends AppCompatActivity {
                 if (e.sets != 0)
                     output2 += "        Number of sets - " + e.sets + "\n";
                 if (e.reps != 0)
-                    output2 += "        Number of reps - " + e.reps + "\n";
+                    output2 += "        Number of reps per set - " + e.reps + "\n";
                 if (e.weight != 0)
                     output2 += "        Weight - " + e.weight + "\n";
                 if (e.time != 0)

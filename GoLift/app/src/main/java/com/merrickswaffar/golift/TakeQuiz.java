@@ -35,4 +35,10 @@ public class TakeQuiz extends AppCompatActivity {
         no = (Button) findViewById(R.id.no);
         no.setOnClickListener(onClick);
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(getApplicationContext(), HomeScreen.class));
+    }
 }

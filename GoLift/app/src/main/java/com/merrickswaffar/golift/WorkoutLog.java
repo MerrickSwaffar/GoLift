@@ -1,11 +1,16 @@
 package com.merrickswaffar.golift;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 
 public class WorkoutLog extends AppCompatActivity {
 
@@ -77,5 +82,20 @@ public class WorkoutLog extends AppCompatActivity {
         Exercise exercise = new Exercise(name, sets, reps, weight, time);
         HomeScreen.user.days.get(date).addExercise(exercise);
         Toast.makeText(getApplicationContext(),"Exercise Added: " + name, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        try{
+            FileOutputStream fileOut = openFileOutput("userData", Context.MODE_PRIVATE);
+            ObjectOutputStream objOut = new ObjectOutputStream(fileOut);
+            objOut.writeObject(HomeScreen.user);
+            fileOut.close();
+            objOut.close();
+        }catch(IOException e){
+            e.printStackTrace();
+            Toast.makeText(getApplicationContext(), "User data could not be saved", Toast.LENGTH_SHORT).show();
+        }
     }
 }

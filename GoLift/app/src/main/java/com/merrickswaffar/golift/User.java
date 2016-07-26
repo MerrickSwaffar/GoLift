@@ -22,15 +22,15 @@ public class User implements Serializable {
         bodyType = BodyTypes.notDetermined;
     }
 
-    public void setBodyType(BodyTypes b){
-        this.bodyType = b;
-    }
-
     public static String getDate() {
         Calendar c = Calendar.getInstance();
         SimpleDateFormat df = new SimpleDateFormat("MM/dd/yyyy");
         String date = df.format(c.getTime());
         return date;
+    }
+
+    public void setBodyType(BodyTypes b){
+        this.bodyType = b;
     }
 
     public void setUserHeight(String userHeight) {
@@ -43,5 +43,29 @@ public class User implements Serializable {
 
     public void setUserWeight(int userWeight) {
         this.userWeight = userWeight;
+    }
+
+    public BodyTypes getBodyType() {
+        return bodyType;
+    }
+
+    public String getUserHeight() {
+        return userHeight;
+    }
+
+    public int getUserAge() {
+        return userAge;
+    }
+
+    public int getUserWeight() {
+        return userWeight;
+    }
+
+    public void clear(){
+        bodyType = BodyTypes.notDetermined;
+        days = new HashMap<>();
+        userHeight = null;
+        userAge = 0;
+        userWeight = 0;
     }
 }

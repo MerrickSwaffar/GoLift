@@ -18,25 +18,25 @@ public class UserInfo extends AppCompatActivity {
         setContentView(R.layout.activity_userinfo);
 
         height = (TextView) findViewById(R.id.height);
-        String userHeight = HomeScreen.user.userHeight;
+        String userHeight = HomeScreen.user.getUserHeight();
         if (userHeight == null)
             height.append("unknown");
         else height.append(userHeight);
 
         weight = (TextView) findViewById(R.id.weight);
-        int userWeight = HomeScreen.user.userWeight;
+        int userWeight = HomeScreen.user.getUserWeight();
         if (userWeight < 1)
             weight.append("unknown");
         else weight.append(userWeight+"");
 
         age = (TextView) findViewById(R.id.age);
-        int userAge = HomeScreen.user.userAge;
+        int userAge = HomeScreen.user.getUserAge();
         if (userAge < 1)
             age.append("unknown");
         else age.append(userAge+"");
 
         bodyType = (TextView) findViewById(R.id.bodyType);
-        User.BodyTypes btype = HomeScreen.user.bodyType;
+        User.BodyTypes btype = HomeScreen.user.getBodyType();
         if (btype == User.BodyTypes.notDetermined)
             bodyType.append("unknown");
         else bodyType.append(btype.toString());
