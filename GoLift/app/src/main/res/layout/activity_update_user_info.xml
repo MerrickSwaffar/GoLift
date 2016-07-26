@@ -7,14 +7,14 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.merrickswaffar.golift.WorkoutLog">
+    tools:context="com.merrickswaffar.golift.UpdateUserInfo">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:text="Enter an exercise (leave fields blank if not applicable):"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Enter your meal information:"
         android:textColor="@color/colorPrimaryDark"
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
@@ -34,58 +34,45 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Name:"
+            android:text="Height:"
             android:id="@+id/textView5"/>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:id="@+id/name"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_below="@+id/textView5"
+        android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Number of sets:"
-            android:id="@+id/textView1"/>
+            <EditText
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="feet"
+                android:ems="10"
+                android:id="@+id/feet"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+            <EditText
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="inches"
+                android:ems="10"
+                android:id="@+id/inches"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"/>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/sets"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Number of reps per set:"
-            android:id="@+id/textView2"/>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/reps"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"/>
-
+        </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="Weight:"
-            android:id="@+id/textView3"/>
+            android:id="@+id/textView1"/>
 
         <EditText
             android:layout_width="match_parent"
@@ -101,27 +88,35 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Time:"
-            android:id="@+id/textView4"/>
+            android:text="Age:"
+            android:id="@+id/textView2"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:ems="10"
-            android:id="@+id/time"
+            android:id="@+id/age"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/textView3"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:text=" Add Exercise "
-            android:id="@+id/bAdd"
+            android:text=" Update  User Information "
+            android:id="@+id/bUpdate"
             android:background="@color/colorPrimaryDark"
             android:textColor="@color/colorAccent"
             android:layout_gravity="center_horizontal" />
 
     </LinearLayout>
+
 </RelativeLayout>
