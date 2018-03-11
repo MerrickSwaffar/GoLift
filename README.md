@@ -1,2 +1,2 @@
 # GoLift
-An Android app for tracking nutrition and excercize information. 
+An Android app for tracking nutrition and excercise information. 
